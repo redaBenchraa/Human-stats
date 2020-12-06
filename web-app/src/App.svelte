@@ -1,14 +1,21 @@
-<style global lang="postcss">
-	/* only apply purgecss on utilities, per Tailwind docs */
-	/* purgecss start ignore */
-	@tailwind base;
-	@tailwind components;
-	/* purgecss end ignore */
-	@tailwind utilities;
-</style>
-
-<script lang="ts">
-	let name = 'world';
+<script>
+import Main from "./Main.svelte";
+import Sidebar from "./Sidebar.svelte";
+  
+  let dark = false;
 </script>
+<syles>
 
-<h1>Hello {name}!</h1>
+</syles>
+
+<main>
+  <div class="flex">
+    <div class="h-screen w-64  bg-gray-300 flex justify-center">
+      <Sidebar/>
+    </div>
+    <div class="h-screen">
+     <Main/>
+    </div>
+  </div>
+  
+</main>
