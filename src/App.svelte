@@ -10,7 +10,7 @@ import Sidebar from "./Sidebar.svelte";
 
 <main>
   <div class="flex">
-    <div class="h-screen w-64  bg-gray-300 flex justify-center">
+    <div class="h-screen w-64 bg-gray-300 flex justify-center">
       <Sidebar/>
     </div>
     <div class="h-screen">
