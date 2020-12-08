@@ -1,12 +1,13 @@
 <script>
   import { Swiper, SwiperSlide } from "swiper/svelte";
   import "swiper/swiper.scss";
-
   export let settings;
-  let activeIndex = 0;
+  let startSlide = 10;
+  let activeIndex = startSlide;
   const arr = Array(settings.end - settings.start + 1)
     .fill()
     .map((_, idx) => settings.start + idx);
+  export let value;
 </script>
 
 <style>
@@ -29,7 +30,7 @@
     <div class="redMarker" />
   </div>
   <Swiper
-    initialSlide={10}
+    initialSlide={startSlide}
     slidesPerView={20}
     spaceBetween={0}
     speed={100}
@@ -41,7 +42,7 @@
     centeredSlides
     freeModeSticky
     on:slideChange={(e) => {
-      activeIndex = e.detail[0][0].activeIndex;
+      value = arr[e.detail[0][0].activeIndex];
     }}>
     {#each arr as item, index}
       {#if item % 5 === 0}
