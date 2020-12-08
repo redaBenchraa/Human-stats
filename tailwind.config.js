@@ -2,9 +2,6 @@ module.exports = {
     purge: [],
     darkMode: 'class', // 'media' / 'class' / 'false'
     theme: {
-        fontFamily:{
-            'sans': ['Roboto', 'Helvetica', 'Arial', 'sans-serif']
-        },
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
@@ -133,11 +130,17 @@ module.exports = {
                 lightBlack: '#8E8E8E',
                 background: '#F8F8F8',
                 button: '#4D7BF3',
-            }
+                buttonDark: '#134AD6',
+            },
+            fontFamily: {
+                'roboto': ['Roboto', 'Helvetica', 'Arial', 'sans-serif']
+            },
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            backgroundColor: ['active']
+        },
     },
     plugins: [],
 }
