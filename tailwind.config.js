@@ -2,13 +2,17 @@ module.exports = {
     purge: [],
     darkMode: 'class', // 'media' / 'class' / 'false'
     theme: {
+        fontFamily:{
+            'sans': ['Roboto', 'Helvetica', 'Arial', 'sans-serif']
+        },
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
-
-            black: '#000',
+            black: '#3A444A',
+            lightBlack: '#8E8E8E',
+            background: '#F8F8F8',
+            button: '#4D7BF3',
             white: '#fff',
-
             gray: {
                 100: '#f7fafc',
                 200: '#edf2f7',
@@ -120,7 +124,17 @@ module.exports = {
                 900: '#702459',
             },
         },
-        extend: {},
+        extend: {
+            borderRadius: {
+                'button': '0.225rem',
+            },
+            colors: {
+                black: '#3A444A',
+                lightBlack: '#8E8E8E',
+                background: '#F8F8F8',
+                button: '#4D7BF3',
+            }
+        },
     },
     variants: {
         extend: {},
