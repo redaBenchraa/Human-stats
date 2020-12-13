@@ -1,4 +1,5 @@
 <script>
+  import {} from "./helper.js";
   import { visible, weight, height, age } from "./stores.js";
   import SwiperCore, { Navigation, Pagination, EffectFade } from "swiper";
   import { Swiper, SwiperSlide } from "swiper/svelte";
@@ -15,24 +16,6 @@
   function handleClick() {
     visible.set(false);
   }
-
-  String.prototype.formatUnicorn =
-    String.prototype.formatUnicorn ||
-    function () {
-      "use strict";
-      var str = this.toString();
-      if (arguments.length) {
-        var t = typeof arguments[0];
-        var key;
-        var args = "string" === t || "number" === t ? Array.prototype.slice.call(arguments) : arguments[0];
-
-        for (key in args) {
-          str = str.replace(new RegExp("\\{" + key + "\\}", "gi"), args[key]);
-        }
-      }
-
-      return str;
-    };
 
   function getText(fact) {
     if (fact.calculation) {
