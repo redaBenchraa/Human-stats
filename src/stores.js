@@ -17,12 +17,12 @@ export const items = [
     label: "Space",
     facts: [
       {
-        text: "1 {0}",
+        text: "You contain You contain You contain You contain You contain You contain You contain You contain You contain You contain You contain You contain You contain You contain {0} atoms",
         calculation: (a, b, c) => a * b * c
       },
       {
         text: "{0} 2",
-        calculation: (a, b, c) => a + b + c
+        calculation: (a, b) => a + b
       }
     ]
   },
