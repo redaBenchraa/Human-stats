@@ -60,7 +60,7 @@
       pagination={{ clickable: true, type: 'fraction' }}>
       {#each item.facts as fact}
         <SwiperSlide class="p-20 h-full w-full">
-          <div class="content h-full text-center">
+          <div class="content h-full text-center text-2xl">
             <span>{getText(fact)}</span>
           </div>
         </SwiperSlide>

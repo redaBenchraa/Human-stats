@@ -5,7 +5,14 @@
   import { selectedItem, visible } from "./stores";
 </script>
 
-<main class="bg-background flex text-black font-roboto select-none">
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+  * {
+    font-family: "Open Sans" !important;
+  }
+</style>
+
+<main class="bg-background flex text-black select-none">
   <div class="h-screen w-96 ml-5">
     <Sidebar />
   </div>

@@ -5,10 +5,6 @@ module.exports = {
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
-            black: '#3A444A',
-            lightBlack: '#8E8E8E',
-            background: '#F8F8F8',
-            button: '#4D7BF3',
             white: '#fff',
             gray: {
                 100: '#f7fafc',
