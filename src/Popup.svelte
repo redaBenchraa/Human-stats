@@ -1,4 +1,5 @@
 <script>
+  import { fade } from "svelte/transition";
   import {} from "./helper.js";
   import { visible, weight, height, age } from "./stores.js";
   import SwiperCore, { Navigation, Pagination, EffectFade } from "swiper";
@@ -19,7 +20,11 @@
 
   function getText(fact) {
     if (fact.calculation) {
-      return fact.text.formatUnicorn(fact.calculation($weight, $height, $age));
+      return fact.text.formatUnicorn(
+        new Intl.NumberFormat().format(
+          Math.trunc(fact.calculation($height, $weight, $age))
+        )
+      );
     }
     return fact.text;
   }
@@ -40,7 +45,9 @@
   }
 </style>
 
-<div class="absolute blur flex justify-center w-screen h-screen z-20">
+<div
+  transition:fade={{ duration: 200 }}
+  class="absolute blur flex justify-center w-screen h-screen z-20">
   <div
     on:click={close}
     class="absolute w-screen h-screen opacity-20 bg-lightBlack z-10" />

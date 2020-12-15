@@ -17,8 +17,11 @@ export const items = [
     label: "Space",
     facts: [
       {
-        text: "You contain You contain You contain You contain You contain You contain You contain You contain You contain You contain You contain You contain You contain You contain {0} atoms",
-        calculation: (a, b, c) => a * b * c
+        text: "We need an elevator {0} your height to reach the moon",
+        calculation: (height) => {
+          console.log(height);
+          return 38440000000 / height;
+        }
       },
       {
         text: "{0} 2",
