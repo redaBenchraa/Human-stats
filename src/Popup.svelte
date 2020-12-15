@@ -54,7 +54,7 @@
   <div class="popup my-auto relative bg-white rounded-lg z-20">
     <div
       on:click={close}
-      class="absolute right-0 font-black cursor-pointer p-1 pr-2 z-30">
+      class="absolute text-2xl right-0 font-black cursor-pointer p-1 pr-2 z-30">
       &#x2716;
     </div>
     <img class="w-40 h-40 -mt-20 mx-auto" src={item.logo} alt={item.label} />

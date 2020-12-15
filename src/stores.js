@@ -18,14 +18,7 @@ export const items = [
     facts: [
       {
         text: "We need an elevator {0} your height to reach the moon",
-        calculation: (height) => {
-          console.log(height);
-          return 38440000000 / height;
-        }
-      },
-      {
-        text: "{0} 2",
-        calculation: (a, b) => a + b
+        calculation: (h, w, a) => 38440000000 / h
       }
     ]
   },
@@ -35,7 +28,8 @@ export const items = [
     label: "Biology",
     facts: [
       {
-        text: "1",
+        text: "Your body contains {0} ml of blood",
+        calculation: (h, w, a) => 0.3669 * h * h * h + 0.03308 * w + 0.1833
       }
     ]
   },
@@ -45,7 +39,8 @@ export const items = [
     label: "Physics",
     facts: [
       {
-        text: "1",
+        text: "Light has travelled roughly {0} Km since you were born",
+        calculation: (h, w, a) => a * 365 * 24 * 3600 * 300000
       }
     ]
   },
@@ -55,7 +50,8 @@ export const items = [
     label: "Chemistry",
     facts: [
       {
-        text: "1",
+        text: "From the carbon in your body, you can make almost {0} pencils",
+        calculation: (h, w, a) => (w * 0.18) / 0.0015
       }
     ]
   },
@@ -65,7 +61,8 @@ export const items = [
     label: "Other",
     facts: [
       {
-        text: "1",
+        text: "Throughout your life, it's estimated that you have farted {0} times (luckily, the majority of it doesn't smell 😂)",
+        calculation: (h, w, a) => 15 * 365 * a
       }
     ]
   },
